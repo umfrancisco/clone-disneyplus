@@ -1,6 +1,7 @@
 @use 'variaveis';
 
 .hero {
+    // tive que alterar as proporções
     padding: calc(5.6vw * 0.85);
     min-height: calc(80vh * 0.85);
     background-image: url(../images/hero_desktop.jpeg);
