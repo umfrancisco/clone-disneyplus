@@ -1,3 +1,4 @@
+@use 'variaveis';
 @use 'hero';
 
 * {
@@ -6,23 +7,19 @@
     box-sizing: border-box;   
 }
 
-$bgColor: #040714;
-$mainTextColor: silver;
-$secondaryTextColor: #f9f9f9;
-
 body {
-    background-color: $bgColor;
+    background-color: variaveis.$bgColor;
 }
 
 @mixin text($fontSize: 16px) {
     font-size: $fontSize;
     line-height: $fontSize + 10px;
-    color: $mainTextColor;
+    color: variaveis.$mainTextColor;
 }
 
 @mixin title($fontSize: 40px) {
     @include text($fontSize);
-    color: $secondaryTextColor;
+    color: variaveis.$secondaryTextColor;
 }
 
 .text--big {
@@ -51,6 +48,6 @@ body {
 
 .link-text {
     @include text(18px);
-    color: $secondaryTextColor;
+    color: variaveis.$secondaryTextColor;
     text-decoration: underline;
 }
