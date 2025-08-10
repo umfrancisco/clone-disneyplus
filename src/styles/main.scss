@@ -45,11 +45,11 @@ body {
     @include title;
 }
 
-.title {
+.title--small {
     @include title(28px);
 }
 
-.link-test {
+.link-text {
     @include text(18px);
     color: $secondaryTextColor;
     text-decoration: underline;
