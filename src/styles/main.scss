@@ -11,19 +11,19 @@ body {
     background-color: variaveis.$bgColor;
 }
 
-@mixin text($fontSize: 16px) {
+@mixin text($fontSize: calc(16px * 0.75)) {
     font-size: $fontSize;
     line-height: $fontSize + 10px;
     color: variaveis.$mainTextColor;
 }
 
-@mixin title($fontSize: 40px) {
+@mixin title($fontSize: calc(40px * 0.75)) {
     @include text($fontSize);
     color: variaveis.$secondaryTextColor;
 }
 
 .text--big {
-    @include text(18px);
+    @include text(calc(18px * 0.75));
 }
 
 .text {
@@ -31,11 +31,11 @@ body {
 }
 
 .text--small {
-    @include text(12px);
+    @include text(calc(12px * 0.75));
 }
 
 .title--big {
-    @include title(44px);
+    @include title(calc(44px * 0.75));
 }
 
 .title {
@@ -43,11 +43,11 @@ body {
 }
 
 .title--small {
-    @include title(28px);
+    @include title(calc(28px * 0.75));
 }
 
 .link-text {
-    @include text(18px);
+    @include text(calc(18px * 0.75));
     color: variaveis.$secondaryTextColor;
     text-decoration: underline;
 }
