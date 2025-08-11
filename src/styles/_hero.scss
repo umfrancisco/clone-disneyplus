@@ -39,19 +39,6 @@
                     max-height: calc(60px * 0.68);
                 }
 
-                button {
-                    display: block;
-                    width: 100%;
-                    height: calc(60px * 0.68);
-                    font-size: calc(18px * 0.68);
-                    color: variaveis.$secondaryTextColor;
-                    background-color: #6421ff;
-                    text-transform: uppercase;
-                    border: none;
-                    border-radius: 4px;
-                    margin-top: 2vw;
-                    margin-bottom: 8px;
-                }
             }
         }
     }
