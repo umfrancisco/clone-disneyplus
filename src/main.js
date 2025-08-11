@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('[data-tab-button]');
+    const questions = document.querySelectorAll('[data-faq-question]');
 
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function(button) {
@@ -12,7 +13,19 @@ document.addEventListener('DOMContentLoaded', function() {
             
         })
     }
+
+    for (let i = 0; i < questions.length; i++) {
+        questions[i].addEventListener('click', toggleAnswerBar)
+    }
 })
+
+function toggleAnswerBar(elemento) {
+    const clazz = 'faq__questions__item--is-open';
+    console.log(elemento);
+    const parentElement = elemento.target.parentNode;
+
+    parentElement.classList.toggle(clazz);
+}
 
 function removeActiveButton() {
     const buttons = document.querySelectorAll('[data-tab-button]');
